@@ -22,12 +22,14 @@ runs=0
 while runs <= N:
     S = nSidedDie(np.array ([p0,1-p0])) - 1 #this function is designed for die, so subtracting 1 will give 0 or 1.
     if S == 1:
-        R = nSidedDie(np.array ([e1,1-e1])) - 1
+        R = nSidedDie(np.array ([e1,1-e1])) - 1 #probability R=1 given S=1
     elif S == 0:
-        R = nSidedDie(np.array ([1-e0, e0])) - 1
-    if R==1:
+        R = nSidedDie(np.array ([1-e0, e0])) - 1 #probability R=0 given S=0
+        
+    if R==1: #if function calculates the probability that, given R=1, what is the chance that S=1
         runs+=1
         if S==1:
             successes+=1
+            
 pote = successes/N 
-print('conditional probability P(S=1|R=1). p=',pote)
+print('3. conditional probability P(S=1|R=1). p=',pote)

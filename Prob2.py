@@ -19,9 +19,9 @@ def nSidedDie(p): #flips the unfair die a single time and returns the result
 
 successes = 0
 for num in range(N):
-    R = nSidedDie(np.array ([e1,1-e1])) - 1
+    R = nSidedDie(np.array ([e1,1-e1])) - 1 #runs the probability that R=1 if S=1
     if R == 1:
-        successes+=1
+        successes+=1 #if R=1, count as success
     
 pote = successes/N 
-print("conditional probability P(R=1|S=1). p=",pote)
+print("2. conditional probability P(R=1|S=1). p=",pote)

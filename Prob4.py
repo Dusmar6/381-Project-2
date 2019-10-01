@@ -27,5 +27,8 @@ for num in range(N):
         R = [nSidedDie(np.array ([1-e0, e0])) - 1, nSidedDie(np.array ([1-e0, e0])) - 1, nSidedDie(np.array ([1-e0, e0])) - 1]
         if sum(R)<2:
             successes+=1
-pote = successes/N
-print("Probability of success with enhanced transmission:",pote)
+pote = successes/N #calculates successful transmissions
+
+failureP = 1-pote #calculates failure transmissions using q = 1-p
+
+print("4. probability of failure with enhanced transmission:",failureP)
