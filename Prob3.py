@@ -18,7 +18,16 @@ def nSidedDie(p): #flips the unfair die a single time and returns the result
 
 
 successes = 0
-for num in range(N):
-
+runs=0
+while runs <= N:
+    S = nSidedDie(np.array ([p0,1-p0])) - 1 #this function is designed for die, so subtracting 1 will give 0 or 1.
+    if S == 1:
+        R = nSidedDie(np.array ([e1,1-e1])) - 1
+    elif S == 0:
+        R = nSidedDie(np.array ([1-e0, e0])) - 1
+    if R==1:
+        runs+=1
+        if S==1:
+            successes+=1
 pote = successes/N 
-print(pote)
+print('conditional probability P(S=1|R=1). p=',pote)

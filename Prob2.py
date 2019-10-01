@@ -24,4 +24,4 @@ for num in range(N):
         successes+=1
     
 pote = successes/N 
-print("Conditional probability P(R=1|S=1). p=",pote)
+print("conditional probability P(R=1|S=1). p=",pote)

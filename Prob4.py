@@ -28,4 +28,4 @@ for num in range(N):
         if sum(R)<2:
             successes+=1
 pote = successes/N
-print("Probability of error with enhanced transmission:",pote)
+print("Probability of success with enhanced transmission:",pote)
