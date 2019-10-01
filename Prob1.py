@@ -27,4 +27,4 @@ for num in range(N):
         failures+=1
     
 pote = failures/N #"probabilities of transmission error
-print(pote)
+print("probabilities of transmission error: ",pote)
